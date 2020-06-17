@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">homeTask_2.1</string>
+    <string name="app_title">Подписка</string>
+    <string name="user_name">Имя пользователя</string>
+    <string name="email_name">Электронная почта</string>
+    <string name="button_ok">OK</string>
+    <string name="button_clear">Очистить</string>
+    <string name="messageOutput">Hello Word!</string>
+</resources>
