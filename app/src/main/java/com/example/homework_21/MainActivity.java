@@ -30,22 +30,22 @@ public class MainActivity extends AppCompatActivity {
         buttonOk = (Button) findViewById(R.id.buttonOk);
         buttonClear = (Button) findViewById(R.id.buttonClear);
 
-        View.OnClickListener onClickListener = new View.OnClickListener(){
+        buttonOk.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view){
-                switch (view.getId()) {
-                    case R.id.buttonOk:
-                        Editable userName = inputUserName.getText();
-                        Editable emailName = inputEmailName.getText();
-                        messageOutput.setText ("Подписка на рассылку успешно оформлена для пользователя " + userName + " на электронный адрес " + emailName);
-                        break;
-                    case R.id.buttonClear:
-                        messageOutput.setText (" ");
-                        break;
-                }
+                Editable userName = inputUserName.getText();
+                Editable emailName = inputEmailName.getText();
+                messageOutput.setText ("Подписка на рассылку успешно оформлена для пользователя " + userName + " на электронный адрес " + emailName);
             }
-        };
-        buttonOk.setOnClickListener(onClickListener);
-        buttonClear.setOnClickListener(onClickListener);
+        });
+
+        buttonClear.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view){
+                inputUserName.setText(" ");
+                inputEmailName.setText(" ");
+                messageOutput.setText (" ");
+            }
+        });
     }
 }
